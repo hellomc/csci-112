@@ -1,0 +1,37 @@
+/* Author: Michelle Adea
+Date: 2018 July 10
+Description: Practicing use of if/else-if statements and switch case.
+*/
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+FILE *fp
+
+int main()
+{
+	char ch;
+	printf("Enter a letter:");
+	scanf("%c", &ch);
+	if (ch >= 'a' && ch <= 'z')
+	{
+		ch -= 'a' - 'A';
+	}
+	else if (ch >= 'A' && ch <= 'Z')
+	{
+		switch (ch)
+		{
+		case 'A': printf(".-"); break;
+		case 'B': printf("-..."); break;
+		case 'C': printf("-.-."); break;
+		case 'D': printf("-.."); break;
+
+		default: printf("error\n");
+		}
+	}
+	else {
+		printf("You have not entered a letter. Program exits.\n");
+		exit(-1);
+	}
+}
