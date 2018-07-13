@@ -1,0 +1,25 @@
+/* Author: Michelle Adea
+Date: 2018 July 12
+Description: Recursive function in place of loops file. Actually a bad practice because
+it involves too much overhead, too much time calling a function.
+*/
+
+#include <stdio.h>
+
+void series(int start, int stop, int step);
+
+int main()
+{
+	series(15, 45, 3);
+	getchar();
+	return 0;
+}
+
+void series(int start, int stop, int step)
+{
+	if (start <= stop)
+	{
+		printf("%d\n", start);
+		series(start + step, stop, step);
+	}
+}
