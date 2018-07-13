@@ -1,28 +1,46 @@
-/*Author: Michelle Adea
-Date: 2018 July 10
-Description: Class example of factorial function.
+/* Author: Michelle Adea
+Date: 2018 July 12
+Description: Practicing for, while, and do while loops.
 */
 
-//Header Files
 #include <stdio.h>
 
-int fact(int n); // 1) Function Prototype = Defines interface.
-
-//Body 2) Function Definition
 int main()
 {
-	int n = 3;
-	int f;
-	f = fact(n);
-	printf("The factorial of %d is %d\n", n, f);
-	return 0;
-}
+	//int i = 1;
 
-// 3) Function Implementation = same format as main function
-int fact(int n)
-{
-	if (n == 1)
-		return 1;
-	else
-		return fact(n - 1) * n;
+	/*while (i < 100)
+	{
+		// More efficient than if loop below, repeats cycle 50 times.
+		//printf("%d\n", i);
+		//i = i + 2;
+
+		if (i % 2)
+			printf("%d\n", i);
+		i = i + 1;
+	}
+	*/
+
+	/*while (i < 100)
+	{
+		if ((i & 2) && (i != 53)) // Skips 53.
+			printf("%d\n", i);
+		i = i + 1;
+	}
+	*/
+
+	int i;
+
+	for (i = 1; i < 10; i++)
+	{
+		if (i == 7)
+			break; // Indicates last case. Stops cycle immediately.
+			//continue; // Special statement skips over remaining statements in block. Block stops here. Only inside loops
+		
+		if (i % 2)
+			printf("%d\n", i);
+	}
+
+	//getchar();
+	return 0;
 }
