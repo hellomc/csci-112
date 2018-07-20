@@ -15,6 +15,8 @@ int main()
 	int a = 10;
 	int b = 20;
 
+	printf("Address of variable a = %p\n", &a);
+
 	man_x_y(&a, &b);
 	printf("a=%d b=%d\n", a, b);
 	getchar();
@@ -25,6 +27,7 @@ int main()
 void man_x_y(int *x, int *y) {
 	(*x)++;
 	(*y)++;
-	printf("x=%d y=%d\n", *x, *y);
+	printf("Value of x = %p\n", x); // Prints address of x.
+	printf("x=%d y=%d\n", *x, *y); // Prints new values of x and y.
 	return;
 }
