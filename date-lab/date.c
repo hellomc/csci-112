@@ -228,7 +228,7 @@ int daysBetweenDates(int *month1, int *day1, int *year1, int *month2, int *day2,
     printf("%d\n", tempd1);
     // For each year, before original year, determines if it's a leap year.
     for (i = (*year1-1); i >= julianyear; i--) {
-        if (isLeapYear(*year1) == 1) {
+        if (isLeapYear(i) == 1) {
             totald1 += 366;
         } else {
             totald1 += 365;
@@ -245,7 +245,7 @@ int daysBetweenDates(int *month1, int *day1, int *year1, int *month2, int *day2,
     tempd2 = toJulian(month2, day2, year2);
     printf("%d\n", tempd2);
     for (i = (*year2-1); i >= julianyear; i--) {
-        if (isLeapYear(*year2) == 1) {
+        if (isLeapYear(i) == 1) {
             totald2 += 366;
         } else {
             totald2 += 365;
